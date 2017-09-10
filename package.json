@@ -24,5 +24,9 @@
   "dependencies": {
     "axios": "^0.16.2",
     "promise": "^8.0.1"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "karma start karma.conf.js"
   }
 }
