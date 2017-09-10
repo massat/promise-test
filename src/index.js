@@ -1,6 +1,14 @@
 import api from './api'
 
-api()
-.then((response) => {
-    console.log(response);
-})
+import Promise from 'promise';
+
+export default {
+    api: () => {
+        return new Promise((resolve, reject) => {
+            api.get()
+            .then((response) => {
+                resolve(response['data']);
+            })
+        })
+    }
+}
